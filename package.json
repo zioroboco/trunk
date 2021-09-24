@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "core",
+    "example"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "^4.4.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "composite": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "lib": ["es2021"],
+    "rootDir": "lib",
+    "skipLibCheck": true
+  }
+}

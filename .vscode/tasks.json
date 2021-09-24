@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "tsc --build --watch",
+      "type": "shell",
+      "command": "${workspaceFolder}/node_modules/.bin/tsc",
+      "args": ["--build", "--watch"],
+      "options": { "shell": { "executable": "/bin/sh", "args": ["-c"] } },
+      "presentation": { "reveal": "silent" },
+      "problemMatcher": ["$tsc-watch"],
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}

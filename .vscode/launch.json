@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "name": "run",
+      "program": "${workspaceFolder}/example/.trunkrc.mjs",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    }
+  ]
+}
