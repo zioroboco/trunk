@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "checkJs": true,
     "composite": true,
     "declaration": true,
@@ -8,7 +7,9 @@
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "lib": ["es2021"],
+    "noEmit": false,
     "rootDir": "lib",
-    "skipLibCheck": true
-  }
+    "types": ["node"]
+  },
+  "include": ["lib"]
 }

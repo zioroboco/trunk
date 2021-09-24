@@ -11,6 +11,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
+  "files": [
+    "lib",
+    "types"
+  ],
   "engines": {
     "node": ">=16"
   },

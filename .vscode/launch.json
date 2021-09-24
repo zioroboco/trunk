@@ -2,9 +2,32 @@
   "configurations": [
     {
       "name": "run",
-      "program": "${workspaceFolder}/example/.trunkrc.mjs",
       "request": "launch",
+      "program": "${workspaceFolder}/example/.trunkrc.mjs",
       "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    },
+    {
+      "name": "jest (all)",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      "runtimeArgs": ["--experimental-vm-modules", "--no-warnings"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "**/*jest*/**"],
+      "type": "pwa-node"
+    },
+    {
+      "name": "jest (file)",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["--runInBand", "${fileBasenameNoExtension}"],
+      "runtimeArgs": ["--experimental-vm-modules", "--no-warnings"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "**/*jest*/**"],
+      "disableOptimisticBPs": true,
       "type": "pwa-node"
     }
   ]

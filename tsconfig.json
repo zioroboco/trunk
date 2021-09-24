@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "lib": ["es2021"],
+    "types": ["node", "jest"]
+  },
   "references": [{ "path": "core" }],
-  "files": []
+  "include": ["**/*.spec.js"]
 }
