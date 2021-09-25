@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "checkJs": true,
     "composite": true,
     "declaration": true,
-    "declarationDir": "generated",
     "declarationMap": true,
-    "emitDeclarationOnly": true,
     "lib": ["es2021"],
     "module": "es2020",
     "moduleResolution": "node",
-    "noEmit": false,
-    "types": ["node"]
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true,
+    "target": "es2021"
   },
-  "include": ["core", "types"]
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }

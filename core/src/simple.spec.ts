@@ -1,8 +1,6 @@
-// @ts-check
-import { jest } from "@jest/globals"
-import { withConfig } from "@zioroboco/trunk"
+import { withConfig } from "."
 
-describe(`the thing`, () => {
+describe(withConfig.name, () => {
   let process = {
     stdout: {
       write: jest.fn(),
