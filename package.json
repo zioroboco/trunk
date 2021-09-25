@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "core": "yarn -s workspace @zioroboco/trunk",
     "docs": "wikidir",
     "postinstall": "wikidir update",
-    "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest",
+    "test": "jest",
     "build": "tsc --build"
   },
   "workspaces": [
@@ -13,14 +14,6 @@
     "projects": [
       "core"
     ]
-  },
-  "wallaby": {
-    "autoDetect": true,
-    "env": {
-      "params": {
-        "runner": "--experimental-vm-modules"
-      }
-    }
   },
   "type": "module",
   "devDependencies": {

@@ -7,9 +7,9 @@ const config = {
   roots: ["<rootDir>/src"],
   globals: {
     "ts-jest": {
-      diagnostics: {
-        ignoreCodes: [151001],
-      },
+      diagnostics: { ignoreCodes: [151001] },
+      isolatedModules: true,
+      useESM: true,
     },
   },
 }
