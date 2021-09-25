@@ -12,13 +12,13 @@
     "registry": "https://npm.pkg.github.com"
   },
   "files": [
-    "lib",
-    "types"
+    "core",
+    "types",
+    "generated"
   ],
   "engines": {
     "node": ">=16"
   },
   "type": "module",
-  "main": "lib/index.js",
-  "types": "types/index.d.ts"
+  "main": "./core/index.js"
 }

@@ -3,13 +3,14 @@
     "checkJs": true,
     "composite": true,
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "generated",
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "lib": ["es2021"],
+    "module": "es2020",
+    "moduleResolution": "node",
     "noEmit": false,
-    "rootDir": "lib",
     "types": ["node"]
   },
-  "include": ["lib"]
+  "include": ["core", "types"]
 }

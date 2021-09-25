@@ -1,17 +1,19 @@
 {
   "private": true,
   "workspaces": [
-    "core",
-    "example"
+    "package"
   ],
   "scripts": {
-    "test": "node --experimental-vm-modules --no-warnings node_modules/.bin/jest",
+    "ts-node": "node --no-warnings --loader ts-node/esm",
+    "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest",
     "build": "tsc --build"
   },
   "jest": {
     "testEnvironment": "node",
-    "projects": [
-      "core"
+    "testRegex": "(spec|test)\\.mjs$",
+    "moduleFileExtensions": [
+      "js",
+      "mjs"
     ]
   },
   "wallaby": {
@@ -22,10 +24,12 @@
       }
     }
   },
+  "type": "module",
   "devDependencies": {
     "@types/jest": "*",
     "@types/node": "*",
     "jest": "^27.2.1",
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   }
 }

@@ -1,9 +1,17 @@
 {
   "configurations": [
     {
-      "name": "run",
+      "name": "run (js)",
       "request": "launch",
-      "program": "${workspaceFolder}/example/.trunkrc.mjs",
+      "program": "${workspaceFolder}/examples/.trunkrc.mjs",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    },
+    {
+      "name": "run (ts)",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/.trunkrc.ts",
+      "runtimeArgs": ["--no-warnings", "--loader=ts-node/esm"],
       "skipFiles": ["<node_internals>/**"],
       "type": "pwa-node"
     },
@@ -27,7 +35,6 @@
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen",
       "skipFiles": ["<node_internals>/**", "**/*jest*/**"],
-      "disableOptimisticBPs": true,
       "type": "pwa-node"
     }
   ]
