@@ -1,8 +1,12 @@
-export type Dependencies = { process: typeof process }
+import { Union } from "ts-toolbelt"
 
-type WithConfigFn = (config: { name: string }, deps?: Dependencies) => void
+export type Generator<C = {}> = (config: C) => void
 
-export const withConfig: WithConfigFn = function (config, deps) {
-  const process = deps?.process ?? global.process
-  process.stdout.write(`Hello ${config.name ?? "nobody"}!\n`)
+/** Union of config properties from a list of generator functions. */
+type ConfigUnion<Gs extends Generator<any>[]> = Union.IntersectOf<
+  Parameters<Gs[number]>[0]
+>
+
+export const withGenerators = <Gs extends Generator<any>[]>(generators: Gs) => {
+  return function withConfig(config: ConfigUnion<Gs>) {}
 }
