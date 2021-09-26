@@ -8,5 +8,5 @@ type ConfigUnion<Gs extends Generator<any>[]> = Union.IntersectOf<
 >
 
 export const withGenerators = <Gs extends Generator<any>[]>(generators: Gs) => {
-  return function withConfig(config: ConfigUnion<Gs>) {}
+  return { withConfig: function (config: ConfigUnion<Gs>) {} }
 }
