@@ -7,6 +7,14 @@ type ConfigUnion<Gs extends Generator<any>[]> = Union.IntersectOf<
   Parameters<Gs[number]>[0]
 >
 
-export const withGenerators = <Gs extends Generator<any>[]>(generators: Gs) => {
-  return { withConfig: function (config: ConfigUnion<Gs>) {} }
+type Dependencies = {
+  process: typeof process
 }
+
+export const withDependencies = (dependencies: Dependencies) => ({
+  withGenerators: <Gs extends Generator<any>[]>(generators: Gs) => ({
+    withConfig: function (config: ConfigUnion<Gs>) {},
+  }),
+})
+
+export const { withGenerators } = withDependencies({ process })
